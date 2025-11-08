@@ -26,23 +26,28 @@ pip install -r requirements.txt
 # [local_path_to_project_root]   -> e.g., /Users/username/PersonalWebsiteDemo
 # -------------------------------------------------------------------
 
+/Users/stefanotuveri/.ssh/ssh-youtubedemopersonalwebsite.key
+https://github.com/iwantedthemail-dotcom/PersonalWebsite.git
+ssh -i /Users/stefanotuveri/.ssh/ssh-youtubedemopersonalwebsite.key ubuntu@145.241.252.141
+
 
 ### PART 1: Initial Server Setup & App Deployment ###
 
 # 1. SSH into the remote server
 # -------------------------------------------------------------------
 # Set correct permissions for your private key on your local machine
-sudo chmod 600 [local_path_to_ssh_key_folder]/ssh-demopersonalwebsite.key
+sudo chmod 600 /Users/stefanotuveri/.ssh/ssh-youtubedemopersonalwebsite.key
 
 # Connect to the server
-ssh -i [local_path_to_ssh_key_folder]/ssh-demopersonalwebsite.key ubuntu@[IP_address_remote_server]
+ssh -i /Users/stefanotuveri/.ssh/ssh-youtubedemopersonalwebsite.key ubuntu@145.241.252.141
 
 
 # 2. Install essential system packages on the server
 # -------------------------------------------------------------------
 sudo apt update && sudo apt upgrade -y
 sudo apt install python3-pip python3-dev python3-venv gunicorn nginx git build-essential -y
-sudo reboot now # Reboot to apply all updates. You will be disconnected.
+sudo reboot now
+# Reboot to apply all updates. You will be disconnected.
 
 
 # 3. Reconnect and deploy the application code
@@ -52,6 +57,7 @@ ssh -i [local_path_to_ssh_key_folder]/ssh-demopersonalwebsite.key ubuntu@[IP_add
 
 # Clone your project from GitHub
 git clone https://github.com/cloned_location/PersonalWebsiteDemo.git
+git clone https://github.com/iwantedthemail-dotcom/PersonalWebsite.git
 
 # Navigate to the backend directory
 cd /home/ubuntu/PersonalWebsiteDemo/backend
@@ -76,12 +82,17 @@ scp -i [local_path_to_ssh_key_folder]/ssh-demopersonalwebsite.key [local_path_to
 # On your LOCAL MACHINE, build the React app
 # npm run build:web
 
+cp -r /Users/stefanotuveri/PycharmProjects/PersonalWebsite/frontend/dist_web/* /Users/stefanotuveri/PycharmProjects/PersonalWebsite/backend/dist_prod
+
 # On your LOCAL MACHINE, copy the build files into a location accessible by the backend
 # cp -r [local_path_to_project_root]/frontend/dist_web/* [local_path_to_project_root]/backend/dist_prod
 # After this, commit and push the `dist_prod` folder to your git repo, then pull it on the server.
 # git add . ; git commit -m "Add production build" ; git push
 #
 # Back on the SERVER, pull the latest changes
+
+mv /home/ubuntu/PersonalWebsite /home/ubuntu/PersonalWebsiteDemo
+
 cd /home/ubuntu/PersonalWebsiteDemo
 git pull
 

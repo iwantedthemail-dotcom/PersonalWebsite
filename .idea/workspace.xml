@@ -5,14 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="c21c1ff7-1313-4093-ba90-f6a693b02b9a" name="Changes" comment="Initial Commit for Personal Site Demo">
-      <change beforePath="$PROJECT_DIR$/.idea/PersonalWebsite.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/PersonalWebsite.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/00_deploy_production_templates_and_scripts/00 Full Deploy Cleaned Up" beforeDir="false" afterPath="$PROJECT_DIR$/00_deploy_production_templates_and_scripts/00 Full Deploy Cleaned Up" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/00_deploy_production_templates_and_scripts/COMMANDS" beforeDir="false" afterPath="$PROJECT_DIR$/00_deploy_production_templates_and_scripts/COMMANDS" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/backend/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/backend/dist_prod/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/backend/dist_prod/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/frontend/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/frontend/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -198,7 +191,7 @@
       <workItem from="1762559462371" duration="86000" />
       <workItem from="1762559702038" duration="397000" />
       <workItem from="1762560929578" duration="3551000" />
-      <workItem from="1762568076765" duration="2112000" />
+      <workItem from="1762568076765" duration="4728000" />
     </task>
     <task id="LOCAL-00001" summary="FIRST COMMIT">
       <option name="closed" value="true" />
@@ -464,7 +457,15 @@
       <option name="project" value="LOCAL" />
       <updated>1762556314851</updated>
     </task>
-    <option name="localTasksCounter" value="34" />
+    <task id="LOCAL-00034" summary="Initial Commit for Personal Site Demo">
+      <option name="closed" value="true" />
+      <created>1762570208897</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1762570208897</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">

@@ -21,7 +21,7 @@ pip install -r requirements.txt
 # PREREQUISITES: Define your parameters before you begin
 # -------------------------------------------------------------------
 # [your_domain_name]             -> e.g., www.personalwebsitedemo.com
-# [IP_address_remote_server]     -> e.g., 141.147.77.217
+# [IP_address_remote_server]     -> e.g., 145.241.252.141
 # [local_path_to_ssh_key_folder] -> e.g., /Users/username/.ssh
 # [local_path_to_project_root]   -> e.g., /Users/username/PersonalWebsiteDemo
 # -------------------------------------------------------------------
@@ -115,7 +115,7 @@ sudo netfilter-persistent save
 
 # Test run gunicorn directly
 gunicorn --bind 0.0.0.0:8000 personalsite.wsgi:application
-# CHECKPOINT: Visit http://[IP_address_remote_server]:8000/admin. You should see the Django admin login.
+# CHECKPOINT: Visit http://145.241.252.141:8000/admin. You should see the Django admin login.
 # Press CTRL+C to stop the test server.
 
 
@@ -244,8 +244,9 @@ sudo systemctl restart nginx
 # -------------------------------------------------------------------
 sudo apt install certbot python3-certbot-nginx -y
 
+ytpersonalwebsitedemo.randomhouse.cc
 # Run Certbot. It will read your Nginx config and automate the setup.
-sudo certbot --nginx -d [your_domain_name]
+sudo certbot --nginx -d ytpersonalwebsitedemo.randomhouse.cc
 # Follow the prompts. When asked, choose the option to redirect HTTP to HTTPS.
 
 
